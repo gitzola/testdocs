@@ -1,0 +1,53 @@
+site_name: Employee Documentation
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Переключить на темную тему
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - content.code.copy
+markdown_extensions:
+  - tables
+  - fenced_code
+  - codehilite
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - nl2br
+  - sane_lists
+  - toc:
+      permalink: true
+      toc_depth: 3
+language: ru
+nav:
+  - Главная: index.md
+  - Руководство: docs.md
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+    absolute_links: relative_to_docs
+
+  links:
+    not_found: warn
+    anchors: info
+    absolute_links: relative_to_docs
+    unrecognized_links: info
+
+plugins:
+  - search
